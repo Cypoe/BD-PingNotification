@@ -377,7 +377,7 @@ module.exports = class PingNotification {
     css = `
 
         .ping-notification {
-            background-color: var(--background-floating);
+            background-color: var(--background-tertiary);
             color: var(--text-normal);
             border-radius: 12px;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 1px rgba(255, 255, 255, 0.1);
@@ -506,16 +506,21 @@ module.exports = class PingNotification {
 
         .ping-notification code {
             background-color: var(--background-secondary);
-            border-radius: 3px;
+            border: 1px solid var(--background-modifier-accent);
+            border-radius: 4px;
             padding: 0.2em 0.4em;
             margin: 0;
-            font-size: 85%;
+            line-height: 1.125rem;
+            font-size: .875rem;
+            text-indent: 0;
+            white-space: pre-wrap;
             font-family: var(--font-code);
             color: var(--text-normal);
         }
 
         .ping-notification pre {
             background-color: var(--background-secondary);
+            border: 1px solid var(--background-modifier-accent);
             border-radius: 4px;
             padding: 0.5em;
             margin: 0.5em 0;
@@ -1043,7 +1048,6 @@ module.exports = class PingNotification {
                 maxHeight: `${settings.maxHeight}px`,
                 display: 'flex',
                 flexDirection: 'column',
-                backgroundColor: 'var(--background-floating)',
                 backdropFilter: 'blur(10px)',
                 borderRadius: '12px',
                 boxShadow: '0 8px 24px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 1px rgba(255, 255, 255, 0.1)',
@@ -1104,8 +1108,7 @@ module.exports = class PingNotification {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        borderRadius: '50%',
-                        backgroundColor: 'var(--button-secondary-background)',
+                        borderRadius: '100%',
                         color: 'var(--interactive-normal)',
                         cursor: 'pointer',
                         transition: 'all 0.2s ease',
@@ -1365,7 +1368,7 @@ module.exports = class PingNotification {
                     color: progressColorString,
                     transition: 'color 0.5s ease',
                     fontWeight: 'bold',
-                    backgroundColor: 'rgba(0, 0, 0, 0.4)',
+                    backgroundColor: 'var(--background-modifier-hover)',
                     padding: '2px 6px',
                     borderRadius: '10px',
                     display: settings.showTimer ? 'block' : 'none'
